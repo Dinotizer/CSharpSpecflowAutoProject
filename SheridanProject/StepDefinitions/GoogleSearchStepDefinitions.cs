@@ -9,8 +9,16 @@ using SheridanAutoProject.Pages;
 namespace SheridanAutoProject.StepDefinitions
 {
     [Binding]
-    internal class GoogleSearchStepDefinitions
+    public class GoogleSearchStepDefinitions
     {
+        private readonly GooglePage _googlePage;
+
+        public GoogleSearchStepDefinitions(
+            GooglePage googlePage)
+        {
+            _googlePage = googlePage;
+        }
+
         [Given(@"the Google webpage is present")]
         public void GivenTheGoogleWebpageIsPresent()
         {

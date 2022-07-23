@@ -1,21 +1,31 @@
 ﻿using OpenQA.Selenium;
-using SheridanAutoProject.Utilities;
+using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support;
 
 namespace SheridanAutoProject.Pages
 {
-    class GooglePage
+    public class GooglePage
     {
-        private IWebDriver driver;
+        private readonly IWebDriver _driver;
+        private readonly By _googleSearchBox = By.ClassName("gLFyf gsfi");
 
-        public GooglePage()
+        public GooglePage(IWebDriver driver)
         {
-            driver = Hooks.driver;
-            var _searchBox = driver.FindElement(By.ClassName("gLFyf gsfi"));
+            _driver = driver;
         }
-
-        public void SendKeysToGoogle()
+        public void NavigateToGoogleSite()
         {
-            //_searchBox.SendKeys("Sheridan Irvine's Git Repo");
+            _driver.Navigate().GoToUrl("http://www.google.co.uk");
         }
+        public void SearchForSheridanRepo()
+        {
+            //_googleSearchBox.SendKeys("abc"); //Need to add SendKeys definition to By class?
+        }
+        //public bool IsSheridanRepoDisplayed()
+        //{
+        //    var isSheridanRepoDisplayed = _driver.IsElementPresent(_repoElement, maxLoadTimeSeconds);
+        //    return isSheridanRepoDisplayed;
+        //}
     }
 }
