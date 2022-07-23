@@ -14,6 +14,7 @@ namespace SheridanAutoProject.Utilities
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
+            driver.Manage().Cookies.DeleteAllCookies();
         }
 
         [AfterScenario]
