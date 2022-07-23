@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpenQA.Selenium;
+using SheridanAutoProject.Pages;
 
-namespace SheridanProject.StepDefinitions
+namespace SheridanAutoProject.StepDefinitions
 {
     [Binding]
     internal class GoogleSearchStepDefinitions

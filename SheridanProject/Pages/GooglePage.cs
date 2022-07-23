@@ -1,16 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OpenQA.Selenium;
+using SheridanAutoProject.Utilities;
 
-namespace SheridanProject.Pages
+namespace SheridanAutoProject.Pages
 {
-    public class GooglePage
+    class GooglePage
     {
-        public void SearchForGitRepo()
+        private IWebDriver driver;
+
+        public GooglePage()
         {
-            
+            driver = Hooks.driver;
+            var _searchBox = driver.FindElement(By.ClassName("gLFyf gsfi"));
+        }
+
+        public void SendKeysToGoogle()
+        {
+            //_searchBox.SendKeys("Sheridan Irvine's Git Repo");
         }
     }
 }
