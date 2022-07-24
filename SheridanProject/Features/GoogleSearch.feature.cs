@@ -74,14 +74,14 @@ namespace SheridanProject.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("I can search for my GitHub Repo on Google")]
+        [NUnit.Framework.DescriptionAttribute("I can search for my LinkedIn account on Google")]
         [NUnit.Framework.CategoryAttribute("googleSearch")]
-        public void ICanSearchForMyGitHubRepoOnGoogle()
+        public void ICanSearchForMyLinkedInAccountOnGoogle()
         {
             string[] tagsOfScenario = new string[] {
                     "googleSearch"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I can search for my GitHub Repo on Google", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I can search for my LinkedIn account on Google", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -96,24 +96,24 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("the Google webpage is present", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 6
- testRunner.When("we search for Sheridan Irvine\'s GitHub Repo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("we search for Sheridan Irvine\'s LinkedIn profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 7
- testRunner.Then("the Google search results should include a link to the Repo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the Google search results should include a link to the LinkedIn profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("I can select my GitHub Repo link from the Google search results")]
+        [NUnit.Framework.DescriptionAttribute("I can select my LinkedIn link from the Google search results")]
         [NUnit.Framework.CategoryAttribute("googleSearch")]
-        public void ICanSelectMyGitHubRepoLinkFromTheGoogleSearchResults()
+        public void ICanSelectMyLinkedInLinkFromTheGoogleSearchResults()
         {
             string[] tagsOfScenario = new string[] {
                     "googleSearch"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I can select my GitHub Repo link from the Google search results", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I can select my LinkedIn link from the Google search results", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 10
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -125,13 +125,13 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 11
- testRunner.Given("Sheridan Irvine\'s GitHub Repo is present in the search results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("Sheridan Irvine\'s LinkedIn link is present in the search results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 12
  testRunner.When("we select it", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 13
- testRunner.Then("we are directed to the GitHub Repo wep page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("we are directed to the LinkedIn profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

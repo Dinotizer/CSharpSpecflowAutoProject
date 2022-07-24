@@ -7,20 +7,20 @@ namespace SheridanAutoProject.Utilities
     [Binding]
     public class Hooks
     {
-        public static IWebDriver driver;
+        public static IWebDriver _driver;
 
         [BeforeScenario]
         public void BeforeScenarioWithTag()
         {
-            driver = new ChromeDriver();
-            driver.Manage().Window.Maximize();
-            driver.Manage().Cookies.DeleteAllCookies();
+            _driver = new ChromeDriver();
+            _driver.Manage().Window.Maximize();
+            _driver.Manage().Cookies.DeleteAllCookies();
         }
 
         [AfterScenario]
         public void AfterScenario()
         {
-            driver.Quit();
+            _driver.Quit();
         }
     }
 }

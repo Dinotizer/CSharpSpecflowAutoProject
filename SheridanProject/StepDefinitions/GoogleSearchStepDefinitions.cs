@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FluentAssertions;
 using OpenQA.Selenium;
 using SheridanAutoProject.Pages;
 
@@ -22,37 +18,37 @@ namespace SheridanAutoProject.StepDefinitions
         [Given(@"the Google webpage is present")]
         public void GivenTheGoogleWebpageIsPresent()
         {
-            throw new PendingStepException();
+            _googlePage.NavigateToGoogleSite();
         }
 
-        [When(@"we search for Sheridan Irvine's GitHub Repo")]
-        public void WhenWeSearchForSheridanIrvinesGitHubRepo()
+        [When(@"we search for Sheridan Irvine's LinkedIn profile")]
+        public void WhenWeSearchForSheridanIrvinesLinkedInProfile()
         {
-            throw new PendingStepException();
+            _googlePage.SearchForSheridanLinkedIn();
         }
 
-        [Then(@"the Google search results should include a link to the Repo")]
-        public void ThenTheGoogleSearchResultsShouldIncludeALinkToTheRepo()
+        [Then(@"the Google search results should include a link to the LinkedIn profile")]
+        public void ThenTheGoogleSearchResultsShouldIncludeALinkToTheLinkedInProfile()
         {
-            throw new PendingStepException();
+            _googlePage.SelectLinkedInLink();
         }
 
-        [Given(@"Sheridan Irvine's GitHub Repo is present in the search results")]
-        public void GivenSheridanIrvinesGitHubRepoIsPresentInTheSearchResults()
-        {
-            throw new PendingStepException();
-        }
+        //[Given(@"Sheridan Irvine's LinkedIn link is present in the search results")]
+        //public void GivenSheridanIrvinesLinkedInLinkIsPresentInTheSearchResults()
+        //{
+            
+        //}
 
-        [When(@"we select it")]
-        public void WhenWeSelectIt()
-        {
-            throw new PendingStepException();
-        }
+        //[When(@"we select it")]
+        //public void WhenWeSelectIt()
+        //{
+        //    throw new PendingStepException();
+        //}
 
-        [Then(@"we are directed to the GitHub Repo wep page")]
-        public void ThenWeAreDirectedToTheGiyHubRepoWepPage()
-        {
-            throw new PendingStepException();
-        }
+        //[Then(@"we are directed to the LinkedIn profile page")]
+        //public void ThenWeAreDirectedToTheLinkedInProfilePage()
+        //{
+        //    throw new PendingStepException();
+        //}
     }
 }
