@@ -9,30 +9,32 @@ namespace SheridanAutoProject.Pages
     public class GooglePage
     {
         private readonly IWebDriver _driver;
-        private readonly By _googleSearchBox = By.ClassName("gLFyf gsfi");
-        private readonly By _SheridanLinkedInLink = By.LinkText("Sheridan Irvine - Test Lead - The Modern Milkman - LinkedIn");
-        private readonly By _SheridanLinkedInProfilePage = By.XPath("//*[@id='main - content']/section[1]/div/section/section[1]/div/div[2]/div[1]/h1");
-
-        public GooglePage(IWebDriver driver, IWebElement element)
+        //private readonly By _googleSearchBox = By.ClassName("gLFyf gsfi");
+        //private readonly By _googleSearchBox = By.ClassName("gLFyf");
+        private readonly By _googleSearchBox = By.CssSelector("input[class=\"gLFyf gsfi\"]");
+        private readonly By _googleTermsAccept = By.Id("L2AGLb");
+        private readonly By _prestonCouncilLink = By.PartialLinkText("Preston City Council: Home Page");
+        
+        //public GooglePage(IWebDriver driver, IWebElement element)
+        public GooglePage(IWebDriver driver)
         {
             _driver = driver;
         }
         public void NavigateToGoogleSite()
         {
             _driver.Navigate().GoToUrl("http://www.google.co.uk");
+            var acceptAll = _driver.FindElement(_googleTermsAccept);
+            acceptAll.Click();
         }
-        public void SearchForSheridanLinkedIn()
+        public void SearchForPrestonCityCouncil()
         {
-            _driver.FindElement(_googleSearchBox).SendKeys("Sheridan Irvine");
+            var searchBox = _driver.FindElement(_googleSearchBox);
+            searchBox.Click();
+            searchBox.SendKeys("Preston City Council" + Keys.Enter);
         }
-        public void SelectLinkedInLink()
+        public void SelectPCCLink()
         {
-            _driver.FindElement(_SheridanLinkedInLink).Click();
+            _driver.FindElement(_prestonCouncilLink).Click();
         }
-        //public bool IsSheridanProfileDisplayed()
-        //{
-        //    var isSheridanProfileDisplayed = _driver.FindElement(_SheridanLinkedInProfilePage);
-        //    return isSheridanProfileDisplayed;
-        //}
     }
 }

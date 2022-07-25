@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
 using OpenQA.Selenium;
 using SheridanAutoProject.Pages;
+using TechTalk.SpecFlow;
 
 namespace SheridanAutoProject.StepDefinitions
 {
@@ -8,47 +9,32 @@ namespace SheridanAutoProject.StepDefinitions
     public class GoogleSearchStepDefinitions
     {
         private readonly GooglePage _googlePage;
+        private readonly PccPage _pccPage;
 
         public GoogleSearchStepDefinitions(
-            GooglePage googlePage)
+            GooglePage googlePage, PccPage pccPage)
         {
             _googlePage = googlePage;
+            _pccPage = pccPage;
         }
 
-        [Given(@"the Google webpage is present")]
-        public void GivenTheGoogleWebpageIsPresent()
+        [Given(@"I search for Preston City Council on Google")]
+        public void GivenISearchForPrestonCityCouncilOnGoogle()
         {
             _googlePage.NavigateToGoogleSite();
+            _googlePage.SearchForPrestonCityCouncil();
         }
 
-        [When(@"we search for Sheridan Irvine's LinkedIn profile")]
-        public void WhenWeSearchForSheridanIrvinesLinkedInProfile()
+        [When(@"I click on the PCC search result")]
+        public void WhenIClickOnThePCCSearchSearchResult()
         {
-            _googlePage.SearchForSheridanLinkedIn();
+            _googlePage.SelectPCCLink();
         }
 
-        [Then(@"the Google search results should include a link to the LinkedIn profile")]
-        public void ThenTheGoogleSearchResultsShouldIncludeALinkToTheLinkedInProfile()
+        [Then(@"I'm directed to the PCC website")]
+        public void ThenImDirectedToThePCCWebsite()
         {
-            _googlePage.SelectLinkedInLink();
+            _pccPage.isPccSiteDisplayed();
         }
-
-        //[Given(@"Sheridan Irvine's LinkedIn link is present in the search results")]
-        //public void GivenSheridanIrvinesLinkedInLinkIsPresentInTheSearchResults()
-        //{
-            
-        //}
-
-        //[When(@"we select it")]
-        //public void WhenWeSelectIt()
-        //{
-        //    throw new PendingStepException();
-        //}
-
-        //[Then(@"we are directed to the LinkedIn profile page")]
-        //public void ThenWeAreDirectedToTheLinkedInProfilePage()
-        //{
-        //    throw new PendingStepException();
-        //}
     }
 }
