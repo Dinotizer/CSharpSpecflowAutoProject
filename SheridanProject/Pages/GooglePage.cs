@@ -3,6 +3,7 @@ using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support;
 using FluentAssertions;
+using SheridanProject.Utilities;
 
 namespace SheridanAutoProject.Pages
 {
@@ -19,7 +20,7 @@ namespace SheridanAutoProject.Pages
         }
         public void NavigateToGoogleSite()
         {
-            _driver.Navigate().GoToUrl("http://www.google.co.uk");
+            _driver.Navigate().GoToUrl(TestConstants.GoogleWebsite);
             var acceptAll = _driver.FindElement(_googleTermsAccept);
             acceptAll.Click();
         }

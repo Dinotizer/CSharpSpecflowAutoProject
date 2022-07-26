@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SheridanProject.Utilities
 {
-    public class Extensions
+    public static class Extensions
     {
-
+        // Coming soon
     }
 }
