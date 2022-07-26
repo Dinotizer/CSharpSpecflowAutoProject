@@ -9,13 +9,10 @@ namespace SheridanAutoProject.Pages
     public class GooglePage
     {
         private readonly IWebDriver _driver;
-        //private readonly By _googleSearchBox = By.ClassName("gLFyf gsfi");
-        //private readonly By _googleSearchBox = By.ClassName("gLFyf");
         private readonly By _googleSearchBox = By.CssSelector("input[class=\"gLFyf gsfi\"]");
         private readonly By _googleTermsAccept = By.Id("L2AGLb");
         private readonly By _prestonCouncilLink = By.PartialLinkText("Preston City Council: Home Page");
         
-        //public GooglePage(IWebDriver driver, IWebElement element)
         public GooglePage(IWebDriver driver)
         {
             _driver = driver;

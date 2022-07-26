@@ -10,8 +10,6 @@ namespace SheridanAutoProject.Pages
     {
         private readonly IWebDriver _driver;
         private readonly By _PccLogoLink = By.ClassName("logo__link");
-
-        //public LinkedInPage(IWebDriver driver, IWebElement element)
         public PccPage(IWebDriver driver)
         {
             _driver = driver;
