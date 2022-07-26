@@ -22,7 +22,6 @@ namespace SheridanAutoProject.Utilities
         {
             _driver = new ChromeDriver();
             _driver.Manage().Window.Maximize();
-            //_driver.Manage().Cookies.DeleteAllCookies();
             _objectContainer.RegisterInstanceAs(_driver, typeof(IWebDriver));
             var googlePage = new GooglePage(_driver);
             _objectContainer.RegisterInstanceAs(googlePage);
