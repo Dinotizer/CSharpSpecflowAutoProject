@@ -1,7 +1,6 @@
 ﻿using FluentAssertions;
 using OpenQA.Selenium;
 using SheridanAutoProject.Pages;
-using TechTalk.SpecFlow;
 
 namespace SheridanAutoProject.StepDefinitions
 {

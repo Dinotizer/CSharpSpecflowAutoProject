@@ -21,8 +21,12 @@ namespace SheridanAutoProject.Pages
         public void NavigateToGoogleSite()
         {
             _driver.Navigate().GoToUrl(TestConstants.GoogleWebsite);
+            
             var acceptAll = _driver.FindElement(_googleTermsAccept);
-            acceptAll.Click();
+            if (acceptAll.Displayed)
+            {
+                acceptAll.Click();
+            }
         }
         public void SearchForPrestonCityCouncil()
         {

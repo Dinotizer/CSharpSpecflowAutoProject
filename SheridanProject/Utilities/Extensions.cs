@@ -8,6 +8,18 @@ namespace SheridanProject.Utilities
 {
     public static class Extensions
     {
-        // Coming soon
+        public static bool IsDisplayed(this IWebElement element, By _googleTermsAccept)
+        {
+			bool result;
+			try
+			{
+				result = element.Displayed;
+			}
+			catch (Exception)
+			{
+				result = false;
+			}
+			return result;
+		}
     }
 }
