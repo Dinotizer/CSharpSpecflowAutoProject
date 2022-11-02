@@ -1,4 +1,4 @@
-# Sheridan's Auto Project
+# Sheridan's Web Auto Project
 
 Hello, and welcome to my Automation Project!
 
