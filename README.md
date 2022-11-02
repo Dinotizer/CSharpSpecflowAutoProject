@@ -6,8 +6,6 @@ I created this, primarily, to showcase my skills to potential employers. But if 
 
 I'm quite near the start of my journey into Test Automation and love learning more each day. This project follows a Page Object Model approach and uses:
 C#,
-.Net,
-NUnit,
 SpecFlow,
 Selenium.
 
